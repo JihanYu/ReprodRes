@@ -5,6 +5,26 @@ Course Project 1
 
 ```r
 library(dplyr);  library(lattice)
+```
+
+```
+## 
+## Attaching package: 'dplyr'
+```
+
+```
+## The following objects are masked from 'package:stats':
+## 
+##     filter, lag
+```
+
+```
+## The following objects are masked from 'package:base':
+## 
+##     intersect, setdiff, setequal, union
+```
+
+```r
 workingpath <- "C:\\Users\\MED1\\Downloads\\Coursera\\repdata_data_activity"
 setwd(workingpath)
 data <- read.csv("activity.csv", head=TRUE)
