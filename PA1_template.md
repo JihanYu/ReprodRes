@@ -53,13 +53,13 @@ head(data.date.sum)
 hist(data.date.sum$total, main="total number of steps", xlab="steps", ylab="Freq", breaks = seq(0, 25000, by=2500))
 ```
 
-![plot of chunk 2_histogram_total_day](figure/2_histogram_total_day-1.png)
+![plot of chunk 2_histogram_total_day](figure/2_hist_total_steps.png)
 
 ```r
 barplot(data.date.sum$total)
 ```
 
-![plot of chunk 2_histogram_total_day](figure/2_histogram_total_day-2.png)
+![plot of chunk 2_histogram_total_day](figure/2_bar_total_steps.png)
 
 
 ## 3. Mean & median number of steps taken each day 
@@ -90,7 +90,7 @@ data.int.ave <- summarise(data.int, ave = mean(steps, na.rm=TRUE))
 plot(data.int.ave$ave, type="l", main="average number of steps", xlab="5-min interval", ylab="average")
 ```
 
-![plot of chunk 4_Time_series](figure/4_Time_series-1.png)
+![plot of chunk 4_Time_series](figure/4_time_series.png)
 
 
 ## 5. 5-minute interval that, on average, contains the maximum number of steps 
@@ -168,7 +168,7 @@ hist(data.imp.date.total$total, breaks = seq(0, 25000, by=2500),
                                 main="total steps(imp : mean for day)", xlab="steps", ylab="freq")
 ```
 
-![plot of chunk 7_histogram_imp_data](figure/7_histogram_imp_data-1.png)
+![plot of chunk 7_histogram_imp_data](figure/7_total_imp_day.png)
 
 ```r
 mean(data.imp.date.total$total)
@@ -209,7 +209,7 @@ hist(data.imp.int.total$total, breaks = seq(0, 25000, by=2500),
                                 main="total steps(imp : mean for interval)", xlab="steps", ylab="freq")
 ```
 
-![plot of chunk 7_histogram_imp_data](figure/7_histogram_imp_data-2.png)
+![plot of chunk 7_histogram_imp_data](figure/7_total_imp_interval.png)
 
 ```r
 mean(data.imp.int.total$total)
@@ -272,4 +272,4 @@ head(data.imp.date.ave)
 xyplot(ave ~ interval | week, data=data.imp.date.ave, layout=c(1, 2), type="l")
 ```
 
-![plot of chunk 8_weekdays_weekends](figure/8_weekdays_weekends-1.png)
+![plot of chunk 8_weekdays_weekends](figure/8_panelplot.png)
